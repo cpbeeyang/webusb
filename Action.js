@@ -32,12 +32,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             // No device was selected.
         }
 
-        await device.open(); //Begin a session
-        await device.selectConfiguration(1);
-        await device.claimInterface(0);
-        await device.releaseInterface(0);
-        await device.close();
-
         if (device !== undefined) {
             // Add |device| to the UI.
         }
