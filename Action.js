@@ -6,17 +6,7 @@ $(document).ready(function(){
             console.log(devices);
         });
         console.log(" clicked ");
-    });
-});
-
-
-document.addEventListener('DOMContentLoaded', async () => {
-    console.log("DOMContentLoaded");
-    const devices = await window.navigator.usb.getDevices();
-    devices.forEach(device => {
-        // Add |device| to the UI.
-        console.log("await navigator.usb.getDevices()");
-        console.log(device);
+        // console.log(devices);
     });
 });
 
