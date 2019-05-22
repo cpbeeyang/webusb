@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         let device;
         try {
             device = await navigator.usb.requestDevice({ filters: [{
-                    vendorId: 0x0630,
-                    productId: 0x0618
+                    vendorId: 0x0483,
+                    productId: 0x5710
                 }]});
         } catch (err) {
             // No device was selected.
