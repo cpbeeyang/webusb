@@ -12,7 +12,7 @@ $(document).ready(function(){
 
 document.addEventListener('DOMContentLoaded', async () => {
     console.log("DOMContentLoaded");
-    const devices = await navigator.usb.getDevices();
+    const devices = await window.navigator.usb.getDevices();
     devices.forEach(device => {
         // Add |device| to the UI.
         console.log("await navigator.usb.getDevices()");
