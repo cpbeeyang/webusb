@@ -26,7 +26,7 @@ var USBDevice = {
         })
     }
 }
-USBDevice.requestDevicePermission();
+// USBDevice.requestDevicePermission();
 
 // function registerUsbEventListeners () {
 //     console.log("reader connect");
