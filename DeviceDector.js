@@ -28,24 +28,24 @@ var USBDevice = {
 }
 USBDevice.requestDevicePermission();
 
-// function registerUsbEventListeners () {
-//     console.log("reader connect");
-//     window.navigator.usb.addEventListener("connect", connectEvent => {
-//         let device = connectEvent.device;
-//         console.log("device connected");
-//         console.log(device);
-//     });
-//     window.navigator.usb.addEventListener("disconnect", connectEvent => {
-//         //Device.close(); //cant call close on removed device
-//         Device = null;
-//         Interfaces = null;
-//         raiseLogEvent("reader disconnect");
-//     });
-//     function raiseLogEvent(message) {
-//         let logEvent = new CustomEvent('logEvent',{detail: message});
-//         if(document) document.dispatchEvent(logEvent);
-//     }
-// }
-// registerUsbEventListeners();
+function registerUsbEventListeners () {
+    console.log("reader connect");
+    window.navigator.usb.addEventListener("connect", connectEvent => {
+        let device = connectEvent.device;
+        console.log("device connected");
+        console.log(device);
+    });
+    window.navigator.usb.addEventListener("disconnect", connectEvent => {
+        //Device.close(); //cant call close on removed device
+        Device = null;
+        Interfaces = null;
+        raiseLogEvent("reader disconnect");
+    });
+    function raiseLogEvent(message) {
+        let logEvent = new CustomEvent('logEvent',{detail: message});
+        if(document) document.dispatchEvent(logEvent);
+    }
+}
+registerUsbEventListeners();
 
 
