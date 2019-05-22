@@ -8,7 +8,7 @@ $(document).ready(function(){
         console.log(" clicked ");
     });
 
-    let devices = await navigator.usb.getDevices();
+    let devices = await window.navigator.usb.getDevices();
     devices.forEach(device => {
         // Add |device| to the UI.
         console.log("await navigator.usb.getDevices()");
